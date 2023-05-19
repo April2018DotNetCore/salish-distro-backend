@@ -15,13 +15,13 @@
 #   end
 # end
 
-# Rails.application.config.middleware.insert_before 0, Rack::Cors do
-#     allow do
-#       origins 'http://localhost:3000', 'http://localhost:3001', 'https://salishdistro.com/'
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins 'http://localhost:3000', 'http://localhost:3001', 'https://salishdistro.com/'
   
-#       resource '*',
-#         headers: :any,
-#         methods: [:get, :post, :put, :patch, :delete, :options, :head],
-#         credentials: true
-#     end
-#   end
+      resource '*',
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        credentials: true
+    end
+  end
